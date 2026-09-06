@@ -78,10 +78,9 @@ so it runs the same on a workstation and on a bare Debian box. Day mode, one red
 ## What it is not
 
 It does not push, alert, digest or export; there is no login and no second viewer; the read state lives in one
-browser. It is not public-facing, and it holds no editorial judgement about what deserves a crew — only what happened,
-where, and what the source said. Comment sources are built as a shell with **no source connected**: the platforms
-either require their own approval or have no API, and scraping a publisher's comment section is not something this
-project does.
+browser. It is not public-facing, and it holds no editorial judgement. Comment sources are built as a shell with
+**no source connected**: the platforms either require their own approval or have no API, and scraping a publisher's
+comment section is not something this project does.
 
 ---
 
