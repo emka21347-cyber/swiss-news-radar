@@ -1,4 +1,4 @@
-# Radar — a news radar for the whole of Switzerland
+# Radar
 
 **One picture instead of ten tabs.** An assignment-desk radar for Swiss regional news: what happened overnight, where,
 and what is coming — read from the official layer of all 2'110 municipalities, on one machine, at zero running cost.
