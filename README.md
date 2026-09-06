@@ -10,12 +10,6 @@ portals, and SRF, RTS, RSI and RTR — places every item on the map by its **BFS
 last 24 hours beside a forward calendar of dated municipal events. It also carries the weather forecast field,
 MeteoSwiss warnings, federal alerts, earthquakes and satellite heat detections.
 
-It is built for one person watching a whole country's official layer all day. The measure is **trust**: it dies if it
-lies, and it dies if it needs babysitting.
-
-> This repository is the overview. **The source code is private** — happy to walk through it, or give access, in a
-> conversation.
-
 ---
 
 ## What it does
@@ -26,6 +20,7 @@ lies, and it dies if it needs babysitting.
 | **Placed, not name-matched** | Every item hangs off a BFS number, so the map, the entity pages, the localities and the calendar all agree, and cross-language matching comes free. Where the placing is right it is *explainably* right — the evidence is stored with the item. |
 | **A forward calendar** | 8'811 dated municipal events in 30 days, read out of iCal, JSON and CMS calendars. No product on the market has this layer. |
 | **Nature events in the same list** | Federal alerts 🚨, earthquakes 〰️, satellite heat sources 🔥 and MeteoSwiss warnings ⛈️ 💨 ❄️ stand among the news, each with its emoji where a news row carries its unread dot. A warning is drawn as a zone, not a point. |
+| **NASA satellite data** 🔥 | Active heat detections from **NASA FIRMS** — VIIRS on Suomi NPP, 375 m resolution, near-real-time — pulled over the Swiss bounding box each cycle and placed on the municipality whose borders hold the point. Low-confidence detections are dropped; the rest name the satellite, their confidence and their radiative power. The wording says plainly that a detection is **not a confirmed fire**: the first three were an industrial plant in Emmen and two sites in Neuchâtel, which is exactly what this data does. |
 | **Local AI, on a short leash** | A model on the workstation condenses text that overflows the box, adds cited context where there is too little, and sorts national items by place. It runs offline; every output passes guards before it is stored. |
 | **No babysitting** | One process. Nothing fetches unless a dashboard is open. Nothing leaves the machine. |
 
