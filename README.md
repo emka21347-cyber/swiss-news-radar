@@ -1,6 +1,6 @@
 # Radar
 
-**One picture instead of ten tabs.** An assignment-desk radar for Swiss regional news: what happened overnight, where,
+**One picture instead of ten tabs.** A desk radar for Swiss regional news: what happened overnight, where,
 and what is coming — read from the official layer of all 2'110 municipalities, on one machine, at zero running cost.
 
 ![The Live dashboard: the forecast field over the country, storm and incident marks, the last 24 hours in the list](docs/screens/desktop-live-1440.png)
@@ -75,12 +75,34 @@ exactly the class of mistake that would end the tool's usefulness. The guard now
 **No framework.** TypeScript, Vite, MapLibre and Node's built-in SQLite — no runtime dependency that needs a compiler,
 so it runs the same on a workstation and on a bare Debian box. Day mode, one red, no rounded corners, no gradients.
 
+## Where the local model goes next: the social layer
+
+The one layer that is built and deliberately left unconnected is **comments**. The shell is there: a comment is placed
+by the region its own text names, through the same gazetteer as every other item, and the display rule was fixed
+*before* any source was wired — comments are aggregated per place and per thread and pseudonymised at that boundary,
+so the interface receives counts and never a handle, and bots are labelled rather than dropped. No source is connected:
+Reddit requires its own approval under its Responsible Builder Policy, the Swiss publishers have no comment API, and
+scraping a publisher's comment section is not something this project does.
+
+What the local model is meant to do once a source is released — offline, on the same machine, so no reader's text
+leaves it:
+
+- **Mood per place.** Read what people in a municipality or a canton are actually saying about a subject, and how that
+  changes over days rather than in one snapshot.
+- **Set it against the official record.** Radar already holds what the authorities, the police and the broadcasters
+  published about that place on that day. The signal a desk wants is the **gap** — where local sentiment and official
+  reporting diverge, or where a place is talking about something no official source has published at all.
+- **Bot behaviour as a subject, not as noise.** Automated and coordinated commenting is counted and labelled from the
+  first line of code rather than filtered away, because it is meant to be *studied*: coordinated activity around a
+  local subject is a likely carrier of misinformation, and is as often the story as the sentiment is.
+
+None of that runs today. The attribution, the aggregation and the display rule do, and they were written first on
+purpose — the rules for handling people's words should not be decided after the data is already flowing.
+
 ## What it is not
 
 It does not push, alert, digest or export; there is no login and no second viewer; the read state lives in one
-browser. It is not public-facing, and it holds no editorial judgement. Comment sources are built as a shell with
-**no source connected**: the platforms either require their own approval or have no API, and scraping a publisher's
-comment section is not something this project does.
+browser. It is not public-facing, and it holds no editorial judgement.
 
 ---
 
