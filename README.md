@@ -5,7 +5,7 @@ and what is coming — read from the official layer of all 2'110 municipalities,
 
 ![The Live dashboard: the forecast field over the country, storm and incident marks, the last 24 hours in the list](docs/screens/desktop-live-1440.png)
 
-Radar polls **894 sources** — the municipalities' own feeds and list pages, all 26 cantonal police forces, the cantonal
+Radar polls **over 1'400 sources** — the municipalities' own feeds and list pages, all 26 cantonal police forces, the cantonal
 portals, and SRF, RTS, RSI and RTR — places every item on the map by its **BFS municipality number**, and shows the
 last 24 hours beside a forward calendar of dated municipal events. It also carries the weather forecast field,
 MeteoSwiss warnings, federal alerts, earthquakes and satellite heat detections.
@@ -16,7 +16,7 @@ MeteoSwiss warnings, federal alerts, earthquakes and satellite heat detections.
 
 | | |
 |---|---|
-| **Every municipality, even thin** | 894 sources, 879 fetching; 866 of 2'110 municipalities delivered something in the last 30 days. ~1'100–1'500 new items a day. |
+| **Every municipality, even thin** | Over 1'400 sources. Measured in early September, at 894 sources: 879 fetching, 866 of 2'110 municipalities delivered something in 30 days, ~1'100–1'500 new items a day. |
 | **Placed, not name-matched** | Every item hangs off a BFS number, so the map, the entity pages, the localities and the calendar all agree, and cross-language matching comes free. Where the placing is right it is *explainably* right — the evidence is stored with the item. |
 | **A forward calendar** | 8'811 dated municipal events in 30 days, read out of iCal, JSON and CMS calendars. No product on the market has this layer. |
 | **Nature events in the same list** | Federal alerts 🚨, earthquakes 〰️, satellite heat sources from **NASA** 🔥 and MeteoSwiss warnings ⛈️ 💨 ❄️ stand among the news, each with its emoji where a news row carries its unread dot. A warning is drawn as a zone, not a point. |
